@@ -1,0 +1,16 @@
+<?php if ($this->writeTemplate): ?>
+	<div class="mod_minify_css_js">
+		<?php if ($this->inputFilesCss): ?>
+			<div class="alert alert-info"><strong><?php echo $this->inputFilesCssLabel; ?></strong> <?php echo $this->inputFilesCss; ?></div>
+			<div class="alert <?php echo $this->outputFileCss->cssClass; ?>"><strong><?php echo $this->outputFileCssLabel; ?></strong>
+				<?php echo $this->outputFileCss->file . " (" . $this->filesizeLabel . $this->outputFileCss->fileSize . ")";?>
+			</div>
+		<?php endif; ?>
+		<?php if ($this->inputFilesJs): ?>
+			<div class="alert alert-info"><strong><?php echo $this->inputFilesJsLabel; ?></strong> <?php echo $this->inputFilesJs; ?></div>
+			<div class="alert <?php echo $this->outputFileJs->cssClass; ?>"><strong><?php echo $this->outputFileJsLabel; ?></strong>
+				<?php echo $this->outputFileJs->file . " (" . $this->filesizeLabel . $this->outputFileJs->fileSize . ")";?>
+			</div>
+		<?php endif; ?>
+	</div>
+<?php endif; ?>
